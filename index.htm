@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="app">
+    <head>
+        <title>AngularJS demo</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta charset="UTF-8">
+
+        <!-- load bootstrap and fontawesome via CDN -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        <style>
+            html, body
+            {
+                font-size: 1.1em;
+            }
+            .done-true {
+                text-decoration: line-through;
+                color: grey;
+            }
+        </style>
+        
+        <!-- load angular via CDN -->
+        <script src="https://code.angularjs.org/1.5.0/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.4/underscore-min.js" integrity="sha512-uLKRd6hCNYAENFn2h7w0p5hrUAz21bAu/85eqSqmQ1Y565lFInwRga9Lgk+QAAR9QvNfSlZjnEb+HHfzkAC/8Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+        <script src="js/app.js"></script>
+        
+    </head>
+    <body>
+
+        <header>
+			<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">AngularJS</a>
+				</div>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+				</ul>
+			</div>
+			</nav>
+		</header>
+
+        <div class="container">
+
+			<div ng-controller="mainController">        
+                <h1>{{title}}</h1>
+                <label for="inputExample">Type something:</label>
+                <input type="text" id="inputExample" ng-model="inputExample" />
+                <br/>
+                <span>{{ inputExample }}</span>                   
+            </div>           
+		</div>
+    </body>
+</html>
